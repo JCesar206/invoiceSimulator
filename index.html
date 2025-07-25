@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Facturas</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/developer.jpg">
+</head>
+<body>
+    <!--Formulario para añadir producto-->
+    <div class="container">
+    <h1>Simulador de Facturas</h1>
+    <div class="form">
+      <input type="text" id="item" placeholder="Descripción del producto" />
+      <input type="number" id="quantity" placeholder="Cantidad" />
+      <input type="number" id="price" placeholder="Precio unitario" />
+      <button id="addBtn">Agregar</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Total</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="invoiceBody"></tbody>
+    </table>
+    <div class="totals">
+      <p>Subtotal: $<span id="subtotal">0.00</span></p>
+      <p>IVA (21%): $<span id="tax">0.00</span></p>
+      <p><strong>Total: $<span id="total">0.00</span></strong></p>
+    </div>
+    <div class="actions">
+      <button id="resetBtn">Reiniciar Factura</button>
+      <button id="exportBtn">Exportar PDF</button>
+    </div>
+  </div>
+    <footer>
+        <div class="redes">
+            <p>&copy;Invoice Simulator Simple.<br>Hecho con ❤️ por mi. 2025 Julio César Yañez M. Todos los derechos reservados.</p><br>
+                <a href="mailto:jcesar206@hotmail.com">Email
+                    <img src="./images/iconHotmail.png" alt="Hotmail"></a>
+                <a href="mailto:jcesar206@hotmail.com">GitHub
+                    <img src="./images/iconGitHub.jpg" alt="GitHub"></a>
+                <a href="mailto:jcesar206@hotmail.com">LinkedIn
+                    <img src="./images/iconLinkedIn.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
